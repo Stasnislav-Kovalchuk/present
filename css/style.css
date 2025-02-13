@@ -20,7 +20,7 @@ body {
     background-image: url('../images/0.webp');
     background-size: cover; 
     background-position: center; 
-    filter: blur(2px); 
+    filter: blur(3px); 
     z-index: -1; 
 } 
 
@@ -31,6 +31,34 @@ h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
 
 }
+
+audio {
+    display: none;
+}
+
+#toggleButton {
+    position: fixed; /* Фіксуємо позицію кнопки */
+    bottom: 20px; /* Відступ від низу екрану */
+    left: 50%; /* Розміщуємо кнопку по центру горизонталі */
+    transform: translateX(-50%);
+    background-color: #50f609; /* Світло-сірий фон */
+    border: none;
+    color: #333; /* Темно-сірий текст */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px; /* Невелике закруглення кутів */
+    transition: background-color 0.3s ease; /* Плавний перехід фону */
+  }
+  
+  #toggleButton:hover {
+    background-color: #ddd; /* Трохи темніший фон при наведенні */
+  }
+
 
 /* Updated style.css for larger buttons with closer floating heart emojis effect */
 .yesButton {

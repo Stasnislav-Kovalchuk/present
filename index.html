@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Pratyusha</title>
-    <!-- <link rel="shortcut icon" type="image/x-icon" href='favicon.ico'> -->
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.cdnfonts.com/css/romantic" rel="stylesheet">
 </head>
@@ -20,11 +19,26 @@
             <img id="gif" src='images/2.gif' alt="Loading..." class="centeredGif" id="loadingGif">
         </div>
     </div>
-</body>
-
-
+    <audio id="myAudio" controls loop autoplay>
+        <source src="./ms.mp3" type="audio/mpeg">
+        Ваш браузер не підтримує аудіо елемент.
+    </audio>
+    <button id="toggleButton">Клацни і дай звуку</button>
 
     <script>
+        const audio = document.getElementById("myAudio");
+        const toggleButton = document.getElementById("toggleButton");
+
+        toggleButton.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                this.textContent = "Вимкнути звук";
+            } else {
+                audio.pause();
+                this.textContent = "Увімкнути звук";
+            }
+        });
+
         const emojiSets = {
             yes: ['❤️', '🥰', '😘', '😘', '💕', '😻', '💗', '💖', '😳', '💝'],
             no: ['😭', '😢', '😥', '😿']
@@ -129,9 +143,6 @@
                 currentIndex = 1;
             }
         });
-
-        
     </script>
-
 </body>
 </html>
